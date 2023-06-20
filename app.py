@@ -47,7 +47,7 @@ def send(Key,st,bo):
     }
     requests.post(url=bo,json=json)
 while True:
-    x=rd(1,1000)
+    x=rd(1,100)
     Key="sk-"+g20()+"T3BlbkFJ"+g20()
     if f(Key):
         st="合法"
