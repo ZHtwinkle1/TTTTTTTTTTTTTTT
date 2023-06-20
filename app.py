@@ -3,7 +3,7 @@ import string
 from random import choice as ci
 from random import randint as rd
 SS=string.ascii_letters+string.digits
-url="https://api.zhtwinkle.cn/v1/chat/completions"
+url="https://api.openai.com/v1/chat/completions"
 bot="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9848af67-323c-4bdb-800e-8f4eb48d382a"
 bot2="https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=1b3989e7-efb6-4520-b6f3-1c22d50300e2"
 json1={
