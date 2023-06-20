@@ -53,5 +53,5 @@ while True:
         st="合法"
         send(Key,st,bot)
     if x==1:
-        send(Key,"测试",bot2)
+        send(Key,"测试-小号",bot2)
     
